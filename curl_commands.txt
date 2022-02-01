@@ -1,0 +1,38 @@
+curl --request DELETE \
+  --url http://127.0.0.1:5000/blog_post/delete_last_ten
+  
+curl --request GET \
+  --url http://127.0.0.1:5000/blog_post/numeric_body
+  
+curl --request GET \
+  --url http://127.0.0.1:5000/blog_post/9999
+  
+curl --request POST \
+  --url http://127.0.0.1:5000/blog_post/2 \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"title": "Post 1",
+	"body": "This is a blog post." 
+}'
+
+curl --request DELETE \
+  --url http://127.0.0.1:5000/user/15
+  
+curl --request GET \
+  --url http://127.0.0.1:5000/user/15
+  
+curl --request GET \
+  --url http://127.0.0.1:5000/user/ascending_id
+  
+curl --request GET \
+  --url http://127.0.0.1:5000/user/ascending_id
+  
+curl --request POST \
+  --url http://127.0.0.1:5000/user \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"name": "Micheal Huluf",
+	"email": "hello@email.com",
+	"address": "111 South 2nd Street",
+	"phone": "5555555555"
+}'  
